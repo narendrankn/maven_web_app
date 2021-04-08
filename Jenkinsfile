@@ -26,7 +26,7 @@ node
  stage('DeployAppintoTomcat')
  {
  sshagent(['ubuntu']) {
-  sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/pipeline/target/maven-web-application.war ubuntu@13.127.251.198:/opt/tomcat/webapps"
+  sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/pipeline/target/maven-web-application.war root@13.127.251.198:/opt/tomcat/webapps"
  }
  }
  
